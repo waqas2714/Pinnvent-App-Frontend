@@ -2,7 +2,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 
 export const createProduct = async (Data) => {
-  const response = await axios.post("http://localhost:5000/api/products", Data);
+  const response = await axios.post("https://pinvent-app-backend-99s4.onrender.com/api/products", Data);
   if (response.statusText === "OK") {
     toast.success("User Registered Successfully!");
   }
@@ -11,28 +11,28 @@ export const createProduct = async (Data) => {
 
 //Get Products
 export const getProducts = async () => {
-  const response = await axios.get("http://localhost:5000/api/products");
+  const response = await axios.get("https://pinvent-app-backend-99s4.onrender.com/api/products");
   
   return response.data;
 };
 
 //Delete Product
 export const deleteProduct = async (id) => {
-  const response = await axios.delete("http://localhost:5000/api/products/"+id);
+  const response = await axios.delete("https://pinvent-app-backend-99s4.onrender.com/api/products/"+id);
   
   return response.data;
 };
 
 //Get Product
 export const getProduct = async (id) => {
-  const response = await axios.get("http://localhost:5000/api/products/"+id);
+  const response = await axios.get("https://pinvent-app-backend-99s4.onrender.com/api/products/"+id);
   
   return response.data;
 };
 
 //Update a Product
 export const updateProduct = async (id,formData) => {
-  const response = await axios.put("http://localhost:5000/api/products/"+id, formData);
+  const response = await axios.put("https://pinvent-app-backend-99s4.onrender.com/api/products/"+id, formData);
   
   return response.data;
 };

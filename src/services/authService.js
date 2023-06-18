@@ -6,7 +6,7 @@ const BACKENDURL=process.env.BACKEND_URL_ENV;
 export const registerUser = async (Data) =>{
     try {
        // const response = await axios.post(`${BACKENDURL}/api/users/register`, Data , {withCredentials:true});
-       const response = await axios.post(" http://localhost:5000/api/users/register",Data,{withCredentials:true});
+       const response = await axios.post(" https://pinvent-app-backend-99s4.onrender.com/api/users/register",Data,{withCredentials:true});
         if (response.statusText === "OK") {
             toast.success("User Registered Successfully!");
         }
@@ -21,7 +21,7 @@ export const registerUser = async (Data) =>{
 export const loginUser = async (Data) =>{
     try {
         // const response = await axios.post(`${BACKENDURL}/api/users/login`, Data , {withCredentials:true});
-       const response = await axios.post(" http://localhost:5000/api/users/login",Data,);
+       const response = await axios.post(" https://pinvent-app-backend-99s4.onrender.com/api/users/login",Data,);
        if (response.statusText === "OK") {
         toast.success("Login successful!");
     }
@@ -36,7 +36,7 @@ export const loginUser = async (Data) =>{
 export const logoutUser = async () =>{
     try {
         // const response = await axios.post(`${BACKENDURL}/api/users/login`, Data , {withCredentials:true});
-       await axios.get(" http://localhost:5000/api/users/logout");
+       await axios.get(" https://pinvent-app-backend-99s4.onrender.com/api/users/logout");
        toast.dark("Logged out Successfully.");
     }catch (err) {
         const message = (err.response && err.response.data && err.response.data.message) || err.message ||err.toString()
@@ -48,7 +48,7 @@ export const logoutUser = async () =>{
 export const forgotPassword = async (userData) =>{
     try {
         // const response = await axios.post(`${BACKENDURL}/api/users/login`, Data , {withCredentials:true});
-       await axios.post(" http://localhost:5000/api/users/forgotPassword",userData);
+       await axios.post(" https://pinvent-app-backend-99s4.onrender.com/api/users/forgotPassword",userData);
        toast.success("Email sent Successfully.");
     }catch (err) {
         const message = (err.response && err.response.data && err.response.data.message) || err.message ||err.toString()
@@ -60,7 +60,7 @@ export const forgotPassword = async (userData) =>{
 export const resetPassword = async (userData, resetToken) =>{
     try {
         // const response = await axios.post(`${BACKENDURL}/api/users/login`, Data , {withCredentials:true});
-       const response = await axios.put(`http://localhost:5000/api/users/resetPassword/${resetToken}`,userData);
+       const response = await axios.put(`https://pinvent-app-backend-99s4.onrender.com/api/users/resetPassword/${resetToken}`,userData);
        return response.data;
     }catch (err) {
         const message = (err.response && err.response.data && err.response.data.message) || err.message ||err.toString()
@@ -71,7 +71,7 @@ export const resetPassword = async (userData, resetToken) =>{
 //Get Login Status 
 export const getLoginStatus = async () =>{
     try {
-       const response = await axios.get(`http://localhost:5000/api/users/loggedIn`);
+       const response = await axios.get(`https://pinvent-app-backend-99s4.onrender.com/api/users/loggedIn`);
        return response.data;
     }catch (err) {
         const message = (err.response && err.response.data && err.response.data.message) || err.message ||err.toString()
@@ -82,7 +82,7 @@ export const getLoginStatus = async () =>{
 //Get User 
 export const getUser = async () =>{
     try {
-       const response = await axios.get(`http://localhost:5000/api/users/getUser`);
+       const response = await axios.get(`https://pinvent-app-backend-99s4.onrender.com/api/users/getUser`);
        return response.data;
     }catch (err) {
         const message = (err.response && err.response.data && err.response.data.message) || err.message ||err.toString()
@@ -93,7 +93,7 @@ export const getUser = async () =>{
 //Update User 
 export const updateUser = async (data) =>{
     try {
-       const response = await axios.patch(`http://localhost:5000/api/users/updateUser`,data);
+       const response = await axios.patch(`https://pinvent-app-backend-99s4.onrender.com/api/users/updateUser`,data);
        return response.data;
     }catch (err) {
         const message = (err.response && err.response.data && err.response.data.message) || err.message ||err.toString()
@@ -104,7 +104,7 @@ export const updateUser = async (data) =>{
 //Change Password 
 export const changePassword = async (data) =>{
     try {
-       const response = await axios.patch(`http://localhost:5000/api/users/changePassword`,data);
+       const response = await axios.patch(`https://pinvent-app-backend-99s4.onrender.com/api/users/changePassword`,data);
        return response.data;
     }catch (err) {
         const message = (err.response && err.response.data && err.response.data.message) || err.message ||err.toString()

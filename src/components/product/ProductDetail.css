@@ -1,0 +1,38 @@
+
+.group {
+  border: 1px solid var(--dark-blue);
+  padding: 5px;
+}
+
+.product-detail {
+  margin-bottom: 5rem;
+  width: 100%;
+  max-width: 500px;
+}
+
+.product-detail .card {
+  width: 100%;
+  max-width: 500px;
+  padding: 1rem;
+}
+
+.product-detail .detail > * {
+  margin-bottom: 1rem;
+}
+
+.product-detail .detail .badge {
+  background-color: var(--color-danger);
+  color: #fff;
+  padding-left: 2px;
+  padding-right: 2px;
+  border-radius: 3px;
+}
+
+.product-detail .detail p b {
+  color: var(--dark-blue);
+}
+
+.group {
+  border: 1px solid var(--dark-blue);
+  padding: 5px;
+}

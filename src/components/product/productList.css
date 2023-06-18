@@ -1,0 +1,54 @@
+ 
+.product-list {
+  color: #333;
+}
+.product-list .table {
+  padding: 5px;
+  width: 100%;
+  overflow-x: auto;
+}
+.product-list .table .search {
+  width: 100%;
+  max-width: 300px;
+}
+.product-list .table table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 1.4rem;
+}
+.product-list .table table thead {
+  border-top: 2px solid var(--light-blue);
+  border-bottom: 2px solid var(--light-blue);
+}
+.product-list .table table th {
+  border: 1px solid #eee;
+}
+.product-list .table table th,
+.product-list .table table td {
+  vertical-align: top;
+  text-align: left;
+  padding: 8px;
+}
+.product-list .table table th.icons,
+.product-list .table table td.icons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.product-list .table table th.icons > *,
+.product-list .table table td.icons > * {
+  margin-right: 7px;
+  cursor: pointer;
+  vertical-align: middle;
+  align-self: center;
+}
+.product-list .table table tr {
+  border-bottom: 1px solid #ccc;
+}
+.product-list .table table tr:nth-child(even) {
+  background-color: #fff;
+}
+.product-list .table table tbody tr:hover {
+  cursor: pointer;
+  background-color: rgba(31, 147, 255, 0.3);
+}
